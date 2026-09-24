@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    >
+
+    <title>Eclipse Exchange</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Шапка -->
+        <header class="header">
+            <div>
+                <div class="logo">ECLIPSE</div>
+                <div class="subtitle">EXCHANGE</div>
+            </div>
+
+            <div class="profile">
+                <div class="avatar">E</div>
+            </div>
+        </header>
+
+
+        <!-- Баланс -->
+        <section class="balance-card">
+
+            <div class="balance-label">
+                Общий баланс
+            </div>
+
+            <div class="balance">
+                $12,480.32
+            </div>
+
+            <div class="balance-change positive">
+                +$342.18; +2.82%
+            </div>
+
+        </section>
+
+
+        <!-- Рынок -->
+        <section class="section">
+
+            <div class="section-header">
+                <h2>Рынок</h2>
+
+                <button class="view-all">
+                    Все
+                </button>
+            </div>
+
+
+            <!-- BTC -->
+            <div class="coin" onclick="openCoin('BTC')">
+
+                <div class="coin-left">
+
+                    <div class="coin-icon btc">
+                        ₿
+                    </div>
+
+                    <div>
+                        <div class="coin-name">
+                            Bitcoin
+                        </div>
+
+                        <div class="coin-symbol">
+                            BTC / USDT
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="coin-right">
+
+                    <div class="coin-price">
+                        $112,430.25
+                    </div>
+
+                    <div class="positive">
+                        +2.41%
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ETH -->
+            <div class="coin" onclick="openCoin('ETH')">
+
+                <div class="coin-left">
+
+                    <div class="coin-icon eth">
+                        Ξ
+                    </div>
+
+                    <div>
+                        <div class="coin-name">
+                            Ethereum
+                        </div>
+
+                        <div class="coin-symbol">
+                            ETH / USDT
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="coin-right">
+
+                    <div class="coin-price">
+                        $4,021.82
+                    </div>
+
+                    <div class="positive">
+                        +1.83%
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SOL -->
+            <div class="coin" onclick="openCoin('SOL')">
+
+                <div class="coin-left">
+
+                    <div class="coin-icon sol">
+                        S
+                    </div>
+
+                    <div>
+                        <div class="coin-name">
+                            Solana
+                        </div>
+
+                        <div class="coin-symbol">
+                            SOL / USDT
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="coin-right">
+
+                    <div class="coin-price">
+                        $241.73
+                    </div>
+
+                    <div class="negative">
+                        -0.64%
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Быстрые действия -->
+        <section class="actions">
+
+            <button class="action buy" onclick="buy()">
+                Купить
+            </button>
+
+            <button class="action sell" onclick="sell()">
+                Продать
+            </button>
+
+        </section>
+
+
+        <!-- Нижняя навигация -->
+        <nav class="bottom-nav">
+
+            <button class="nav-item active" onclick="showPage('market')">
+                <span>📊</span>
+                <small>Рынок</small>
+            </button>
+
+            <button class="nav-item" onclick="showPage('portfolio')">
+                <span>💼</span>
+                <small>Портфель</small>
+            </button>
+
+            <button class="nav-item" onclick="showPage('history')">
+                <span>🧾</span>
+                <small>История</small>
+            </button>
+
+            <button class="nav-item" onclick="showPage('profile')">
+                <span>👤</span>
+                <small>Профиль</small>
+            </button>
+
+        </nav>
+
+    </div>
+
+
+    <!-- Модальное окно -->
+    <div id="modal" class="modal hidden">
+
+        <div class="modal-content">
+
+            <button class="close" onclick="closeModal()">
+                ×
+            </button>
+
+            <div id="modalContent"></div>
+
+        </div>
+
+    </div>
+
+
+    <script src="app.js"></script>
+
+</body>
+</html>
